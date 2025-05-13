@@ -1,19 +1,19 @@
 ### Базовая настройка:
 ---
-	1.1 Поставить ip на виртуальный интерфейс:
+1. Поставить ip на виртуальный интерфейс:
 ```
 interface int0
 	ip address 192.168.1.2/24
 ```
 
-	1.2 Создать на физическом порту service-instance, указать нетегированный трафик и подключить виртуальный интерфейс (вариант без vlan):
+2. Создать на физическом порту service-instance, указать нетегированный трафик и подключить виртуальный интерфейс (вариант без vlan):
 ```
 port ge0
 	service-instance WAN
 		encapsulation untagged
 		connect ip interface int0
 ```
-	Если нужны vlan:
+Если нужны vlan:
 ```
 port ge0
 	service-instance WAN
