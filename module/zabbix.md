@@ -67,6 +67,7 @@ Hostname=
     Add
 
 ### Билеты
+---
 1. Выполнить мониторинг и анализ работы локальной сети с помощью Zabbix.
 
   а) Клиенты
@@ -106,9 +107,30 @@ Hostname=
   б) Карты:
   
     Monitoring - Maps - Create map
+    
       Name: Example
       
-  
+      Icon highlight + 
+      
+      Mark elements on trigger status change +
+      
+      Number of problems and expand most critical one
+      
+      Add
+      
+    Example - Edit map 
+    
+    Map element - Add 
+
+      Type: Host
+
+      Label: example
+
+      Host: client/server
+
+      Icons: zabbix-server/server
+
+    Link - Add
 9. Проанализируйте работу сервера и выведите графики загруженности за разный период времени.
 
   а) Добавляем клиентов.
