@@ -50,6 +50,21 @@ Server=<адрес контейнера>
 ServerActive=<адрес контейнера>
 Hostname=
 ```
+В zabbix:
+  `Monitoring - Hosts - Zabbix server - Configuration - Host - Delete`
+  `Monitoring - Hosts - Create host`
+
+Меню `New host`: 
+    
+    Host name: example
+  
+    Templates: Linux by Zabbix agent
+  
+    Host groups: Zabbix servers
+  
+    Interfaces: Add - Agent - IP address
+  
+    Add
 
 ### Билеты
 1. Выполнить мониторинг и анализ работы локальной сети с помощью Zabbix.
@@ -82,8 +97,28 @@ Hostname=
    Zabbix + хосты
 
 5. Проанализируйте работу сети с использованием протокола SNMP.
-  
+
 
 7. Постройте топологию сети с помощью Zabbix.
+  
 
-8. Проанализируйте работу сервера и выведите графики загруженности за разный период времени.
+9. Проанализируйте работу сервера и выведите графики загруженности за разный период времени.
+
+  а) Добавляем клиентов.
+  
+  б) Графики:
+
+       Dashboards - Actions (три палочки) - Create New
+     
+         Name: Example
+     
+       Add widget
+     
+         Type: Graph
+     
+         Name: Example
+     
+         Refresh interval: 10 seconds
+     
+         Data set - host patterns - Select - Virtual machines - client1; item patterns  - Select - CPU utilization + Memory utilization
+
