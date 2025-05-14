@@ -83,7 +83,7 @@ Hostname=
      
          Name: Example
      
-       Add widget
+       Меню Add widget
      
          Type: Graph
      
@@ -112,7 +112,7 @@ Hostname=
      
          Name: Example
      
-       Add widget
+       Меню Add widget
      
          Type: Graph
      
