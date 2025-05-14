@@ -55,6 +55,9 @@ Hostname=example
 
 5. Проанализируйте работу сети с использованием протокола SNMP.
 
+В windows 10:
+
+    Settings - Apps - Optional features - Add a feature - SNMP
 
 7. Постройте топологию сети с помощью Zabbix.
 
