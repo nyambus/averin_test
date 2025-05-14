@@ -57,8 +57,32 @@ Hostname=example
 
 В windows 10:
 
-    Settings - Apps - Optional features - Add a feature - SNMP
+    Settings - Apps - Optional features - Add a feature - SNMP 
 
+    Win + R - services.msc - SNMP Service - Agent:
+    
+      Contact: Zabbix user
+      
+      Location: urtk
+      
+    Security - Accepted community names - Add
+    
+      Community rights: READ ONLY
+      
+      Community Name: example
+      
+    Accept SNMP packets from any host +
+
+В zabbix:
+
+    interfaces - Add - SNMP
+    
+      SNMP version: SNMPv2
+      
+      SNMP community: example
+      
+      Add
+    
 7. Постройте топологию сети с помощью Zabbix.
 
   а) Добавляем клиентов. 
