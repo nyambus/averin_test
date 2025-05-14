@@ -16,8 +16,20 @@ Hostname=
 
 В zabbix:
 
+  `Monitoring - Hosts - Create host`
 
-
+Меню `New host`: 
+    
+    Host name: client1
+  
+    Templates: Linux by Zabbix agent
+  
+    Host groups: Linux servers
+  
+    Interfaces: Add - Agent - IP address
+  
+    Add
+    
 1. Выполнить мониторинг и анализ работы локальной сети с помощью Zabbix.
 
 
