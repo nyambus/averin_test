@@ -9,17 +9,11 @@ apt install zabbix-agent2
 ```
 `nano /etc/zabbix/zabbix-agent2.conf`:
 ```
-Server=
-ServerActive=
-Hostname=
+Server=<адрес сервера>
+ServerActive=<адрес сервера>
+Hostname=example
 ```
 Если клиент - сам сервер:
-```
-wget https://repo.zabbix.com/zabbix/7.2/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.2+ubuntu22.04_all.deb
-dpkg -i zabbix-release_latest_7.2+ubuntu22.04_all.deb
-apt update 
-apt install zabbix-agent2
-```
 `nano /etc/zabbix/zabbix-agent2.conf`:
 ```
 Server=<адрес контейнера>
