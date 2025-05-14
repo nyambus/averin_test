@@ -1,1 +1,37 @@
+### Добавление клиентов
+---
+На клиенте:
+```
+wget https://repo.zabbix.com/zabbix/7.2/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.2+ubuntu22.04_all.deb
+dpkg -i zabbix-release_latest_7.2+ubuntu22.04_all.deb
+apt update 
+apt install zabbix-agent2
+```
+`nano /etc/zabbix/zabbix-agent2.conf`:
+```
+Server=
+ServerActive=
+Hostname=
+```
 
+В zabbix:
+
+
+
+1. Выполнить мониторинг и анализ работы локальной сети с помощью Zabbix.
+
+
+
+
+Monitoring - Hosts - Create host
+Hostname: client1 
+
+2, 6. Проанализируйте работу нескольких устройств и постройте графики их показателей с помощью Zabbix.
+
+3. Выполнить установку и настройку программы для мониторинга систем.
+
+4. Проанализируйте работу сети с использованием протокола SNMP.
+
+5. Постройте топологию сети с помощью Zabbix.
+
+7. Проанализируйте работу сервера и выведите графики загруженности за разный период времени.
