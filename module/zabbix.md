@@ -24,22 +24,36 @@ Hostname=
   
     Templates: Linux by Zabbix agent
   
-    Host groups: Linux servers
+    Host groups: Virtual machines
   
     Interfaces: Add - Agent - IP address
   
     Add
-    
+
+### Билеты
 1. Выполнить мониторинг и анализ работы локальной сети с помощью Zabbix.
+(Полагаю либо добавить нескольких клиентов будет достаточно, либо комплексно сделать все (клиенты, панели, мб простенькую топологию)
 
+2, 6. Проанализируйте работу нескольких устройств и постройте графики их показателей с помощью Zabbix. 
 
+  1) Добавляем клиентов.
+  
+  2) Графики:
 
-
-Monitoring - Hosts - Create host
-Hostname: client1 
-
-2, 6. Проанализируйте работу нескольких устройств и постройте графики их показателей с помощью Zabbix.
-
+       Dashboards - Actions (три палочки) - Create New
+     
+         Name: Example
+     
+       Add widget
+     
+         Type: Graph
+     
+         Name: Example
+     
+         Refresh interval: 10 seconds
+     
+         Data set - host patterns - Select - Virtual machines - client1; item patterns  - Select - CPU utilization + Memory utilization
+         
 3. Выполнить установку и настройку программы для мониторинга систем.
 
 4. Проанализируйте работу сети с использованием протокола SNMP.
