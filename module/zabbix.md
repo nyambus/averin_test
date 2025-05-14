@@ -13,6 +13,19 @@ Server=
 ServerActive=
 Hostname=
 ```
+Если клиент - сам сервер:
+```
+wget https://repo.zabbix.com/zabbix/7.2/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.2+ubuntu22.04_all.deb
+dpkg -i zabbix-release_latest_7.2+ubuntu22.04_all.deb
+apt update 
+apt install zabbix-agent2
+```
+`nano /etc/zabbix/zabbix-agent2.conf`:
+```
+Server=<адрес контейнера>
+ServerActive=<адрес контейнера>
+Hostname=example
+```
 
 В zabbix:
 
@@ -20,7 +33,7 @@ Hostname=
 
 Меню `New host`: 
     
-    Host name: client1
+    Host name: example
   
     Templates: Linux by Zabbix agent
   
@@ -30,16 +43,30 @@ Hostname=
   
     Add
 
+Если клиент - сам сервер:
+```
+wget https://repo.zabbix.com/zabbix/7.2/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.2+ubuntu22.04_all.deb
+dpkg -i zabbix-release_latest_7.2+ubuntu22.04_all.deb
+apt update 
+apt install zabbix-agent2
+```
+`nano /etc/zabbix/zabbix-agent2.conf`:
+```
+Server=<адрес контейнера>
+ServerActive=<адрес контейнера>
+Hostname=
+```
+
 ### Билеты
 1. Выполнить мониторинг и анализ работы локальной сети с помощью Zabbix.
 
-(Полагаю либо добавить нескольких клиентов будет достаточно, либо комплексно сделать все (клиенты, панели, мб простенькую топологию)
+        (Полагаю либо добавить нескольких клиентов будет достаточно, либо комплексно сделать все (клиенты, панели, мб простенькую топологию)
 
 2, 6. Проанализируйте работу нескольких устройств и постройте графики их показателей с помощью Zabbix. 
 
-  1) Добавляем клиентов.
+  а) Добавляем клиентов.
   
-  2) Графики:
+  б) Графики:
 
        Dashboards - Actions (три палочки) - Create New
      
@@ -56,9 +83,11 @@ Hostname=
          Data set - host patterns - Select - Virtual machines - client1; item patterns  - Select - CPU utilization + Memory utilization
          
 3. Выполнить установку и настройку программы для мониторинга систем.
+   Zabbix + хосты
 
-4. Проанализируйте работу сети с использованием протокола SNMP.
+5. Проанализируйте работу сети с использованием протокола SNMP.
+  
 
-5. Постройте топологию сети с помощью Zabbix.
+7. Постройте топологию сети с помощью Zabbix.
 
-7. Проанализируйте работу сервера и выведите графики загруженности за разный период времени.
+8. Проанализируйте работу сервера и выведите графики загруженности за разный период времени.
